@@ -1,6 +1,6 @@
 package classes.superclasses;
 
-public class LibraryItem {
+public abstract class LibraryItem {
     
     private String name;
     private String author;

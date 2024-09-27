@@ -1,6 +1,6 @@
 package classes.superclasses;
 
-public class Employee {
+public abstract class Employee {
     
     private int cpf;
     private float salary;
