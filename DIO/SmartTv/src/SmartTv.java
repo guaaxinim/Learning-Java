@@ -3,9 +3,9 @@ import java.util.Arrays;
 public class SmartTv {
 
     private final int[] ALL_CHANNELS = {1, 5, 7, 10, 11, 15};
-    private boolean on = false;
-    private int channel = 1;
-    private int volume = 20;
+    private boolean on;
+    private int channel;
+    private int volume;
 
     public SmartTv(boolean on, int channel, int volume){
         this.on = on;
@@ -89,7 +89,11 @@ public class SmartTv {
     }
 
     public int getChannel(){
-        return this.channel;
+        boolean inArray = Arrays.stream(ALL_CHANNELS).anyMatch(chan -> chan == this.channel);
+        if (inArray){
+            return this.channel;
+        }
+        else{return -1;}
     }
 
     public int getVolume(){
