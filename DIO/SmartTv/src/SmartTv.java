@@ -14,6 +14,9 @@ public class SmartTv {
     }
 
     // Changing state zone.
+    /**
+     * Alter 'this.on' value
+     */
     public void power(){
         this.on = !this.on;
     }
